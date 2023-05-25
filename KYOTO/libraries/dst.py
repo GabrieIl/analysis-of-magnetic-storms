@@ -34,7 +34,7 @@ class DstExtraction:
             if len(period) == 4:
                 [new_periods.append(f'{period}-0{i}' if i < 10 else f'{period}-{i}') for i in range(1, 13)]
             else:
-                year, month = period.split('-')
+                _, month = period.split('-')
                 if 1 <= int(month) <= 12:
                     new_periods.append(period)
                 else:
